@@ -1,0 +1,43 @@
+{% extends 'work/base.html' %}-->
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="(% salon/css/styles.css)%)" />
+<h1>{{ title }}</h1>
+
+<form method="POST" >
+    {% csrf_token %}
+    <br>
+        <p>Дата
+
+    {{form.data_w}}
+
+    <br>
+
+        <p>Время
+
+    {{form.time_w}}
+    <br>
+        <p>Услуга
+
+    {{form.work_w}}
+    <br>
+        <p>ФИО
+
+    {{form.fio_w}}
+    <br>
+        <p>Контакт
+
+    {{form.tel_w}}
+
+
+    <input type="submit" name="'CreateWork'">
+</form>
+
+
+
+
+
+</body>
+</html>
+{% endblock%}

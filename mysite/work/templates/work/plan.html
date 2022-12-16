@@ -1,0 +1,18 @@
+{% extends 'work/base.html' %}-->
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="(% salon/css/styles.css)%)" />
+<h1>{{ title }}</h1>
+
+
+{% for all_work_plan in all_work_plan %}
+<div>
+    <p>{{all_work_plan}}</p>
+    <p>Дата формирования - {{all_work_plan.created_w}}</p>
+    <hr>
+</div>
+{% endfor %}
+</body>
+</html>
+{% endblock%}
